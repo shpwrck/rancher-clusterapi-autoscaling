@@ -12,9 +12,9 @@ This repo outlines all of the steps required to run cluster-autoscaler with Ranc
 1. Create an RKE2 cluster on a cloud provider.
    - Create one `Machine Pool` with etcd/controlplane roles enabled.
    - Create one `Machine Pool` with just worker role enabled.
-2. In the Rancher management cluster create the https://kubernetes.github.io/autoscaler repository. (Included in repo)
-3. Install the autoscaler application into the `fleet-default` namespace. (Example values.yaml included in repo)
-4. Apply additional roles/rolebindings. (Example provided in repo)
+2. In the Rancher management cluster create the https://kubernetes.github.io/autoscaler repository. [Included in repo](https://raw.githubusercontent.com/shpwrck/rancher-clusterapi-autoscaling/main/rancher-cluster-resources/repository.yaml)
+3. Install the autoscaler application into the `fleet-default` namespace. [Example in this repo](https://raw.githubusercontent.com/shpwrck/rancher-clusterapi-autoscaling/main/rancher-cluster-resources/values.yaml)
+4. Apply additional roles/rolebindings. [Example provided in repo](https://raw.githubusercontent.com/shpwrck/rancher-clusterapi-autoscaling/main/rancher-cluster-resources/additional_roles_and_bindings.yaml)
 5. Clone the worker `Machine Pool` and change the following:
 
       Add two annotations:
