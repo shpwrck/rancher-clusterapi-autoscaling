@@ -45,5 +45,5 @@ This repo outlines all of the steps required to run cluster-autoscaler with Ranc
 
 ## Current Implications
 
-- Rancher is not "aware" of the new node pool. This means that if you delete the cluster you may have to delete the additional machines/machinesets/machinedeployments.
+- Rancher is not "fully aware" of the new node pool. This means that if you delete the cluster you may have to delete the additional machines/machinesets/machinedeployments.
 - The reason for the additional node pool is that the Rancher provisioning controller overrides scaling adjustments.
