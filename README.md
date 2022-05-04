@@ -53,7 +53,7 @@ This repo outlines all of the steps required to run cluster-autoscaler with Ranc
       metadata:
           name: {{ INSERT NEW DEPLOYMENT NAME }}
       ...
-      ```yaml
+      ```
       
 6. Test with workload.
 
