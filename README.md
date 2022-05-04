@@ -26,6 +26,13 @@ This repo outlines all of the steps required to run cluster-autoscaler with Ranc
           cluster.x-k8s\.io/cluster-api-autoscaler-node-group-min-size: "{{ INSERT MIN SIZE DIGIT }}"
       ...
       ```
+      Remove generated labels:
+      ```yaml
+      ...
+      labels:
+        objectset.rio.cattle.io/hash: 581f8260dac18d89c7f6a63e0e10f0dbfe0443
+      ...
+      ```
       Update the deployment-name label in two locations:
       ```yaml
       ...
@@ -40,7 +47,14 @@ This repo outlines all of the steps required to run cluster-autoscaler with Ranc
               cluster.x-k8s.io/deployment-name: {{ INSERT NEW DEPLOYMENT NAME }}
       ...
       ```
-
+      Update the metadata.name:
+      ```yaml
+      ...
+      metadata:
+          name: {{ INSERT NEW DEPLOYMENT NAME }}
+      ...
+      ```yaml
+      
 6. Test with workload.
 
 ## Current Implications
